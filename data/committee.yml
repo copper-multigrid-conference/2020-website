@@ -1,0 +1,127 @@
+- name: 
+  email:
+  url:
+  affil:
+  role: 
+
+- name: Michele Benzi
+  email: michele.benzi@sns.it
+  affil: Scuola Normale Superiore
+  url: https://www.sns.it/it/benzi-michele
+  role: Conference Chair, SIAM Representative
+
+- name: John Shadid
+  email: jnshadi@sandia.gov
+  affil: Sandia National Laboratories
+  url: http://www.cs.sandia.gov/ccr-jnshadi
+  role: Conference Chair
+
+- name: Xiao- Chuan Cai
+  affil: University of Colorado
+  url: http://www.cs.colorado.edu/~cai/
+  role: Program Committee
+
+- name: Luis Chacon
+  affil: Los Alamos National Laboratory
+  url: https://www.researchgate.net/profile/Luis_Chacon8/
+  role: Program Committee
+
+- name: Edmond Chow
+  affil: Georgia Institute of Technology
+  url: https://www.cc.gatech.edu/~echow/
+  role: Program Committee
+
+- name: Howard Elman
+  affil: University of Maryland
+  url: http://www.cs.umd.edu/~elman
+  role: Program Committee
+
+- name: Patrick Farrell 
+  affil: University of Oxford
+  url: https://www.oriel.ox.ac.uk/people/dr-patrick-farrell
+  role: Program Committee
+
+- name: Kirk Jordan
+  affil: IBM, Watson Research Center
+  url: http://cifellows.org/match/kirk-jordan-at-ibm-tj-watson-reserach-center/
+  role: Program Committee
+
+- name: Tim Kelley
+  affil: North Carolina State University
+  url: http://www.math.ncsu.edu/~ctk/
+  role: Program Committee
+
+- name: Misha Kilmer
+  affil: Tufts University
+  url: http://www.tufts.edu/~mkilme01/
+  role: Program Committee
+
+- name: Sven Leyffer
+  affil: Argonne National Laboratory
+  url: http://wiki.mcs.anl.gov/leyffer/index.php/Sven_Leyffer
+  role: Program Committee
+
+- name: Xiaoye Sherry Li
+  affil: Lawrence Berkeley National Laboratory
+  url: http://crd-legacy.lbl.gov/~xiaoye/
+  role: Program Committee, Student Paper Competition Chair
+
+- name: Tom Manteuffel
+  affil: University of Colorado
+  url: http://grandmaster.colorado.edu/~tmanteuf/
+  role: Program Committee
+
+- name: James Nagy
+  affil: Emory University
+  url: http://www.mathcs.emory.edu/faculty-member.php?name=james-nagy
+  role: Program Committee
+
+- name:  Kengo Nakajima
+  affil: University of Tokyo
+  url:   http://nkl.cc.u-tokyo.ac.jp/
+  role:  Program Committee
+
+- name: Luke Olson
+  affil: University of Illinois at Urbana-Champaign
+  url: http://lukeo.cs.illinois.edu
+  role: Program Committee
+
+- name: Carmen Rodrigo
+  affil: Universidad de Zaragoza
+  url: https://iuma.unizar.es/es/personal/rodrigo-cardiel-carmen
+  role: Program Committee
+
+- name: Geoff Sanders
+  affil: Lawrence Livermore National Laboratory
+  url:  http://people.llnl.gov/sanders29
+  role: Program Committee
+
+- name: David Silvester
+  affil: University of Manchester
+  url: http://www.ma.umist.ac.uk/djs
+  role: Program Committee
+
+- name: Andreas Stathopoulos
+  affil: College of William and Mary
+  url: http://www.cs.wm.edu/~andreas/
+  role: Program Committee
+
+- name: Ray Tuminaro
+  affil: Sandia National Laboratories
+  url: https://cfwebprod.sandia.gov/cfdocs/CompResearch/templates/insert/profile.cfm?rstumin 
+  role: Program Committee
+
+- name: Karen Willcox
+  affil: University of Texas
+  url: http://web.mit.edu/kwillcox/www/index.html
+  role: Program Committee
+
+- name: Carol Woodward
+  affil: Lawrence Livermore National Laboratory
+  url: http://people.llnl.gov/woodward6
+  role: Program Committee
+
+- name: Irad Yavneh
+  affil: Technion
+  url: http://www.cs.technion.ac.il/people/irad/
+  role: Program Committee

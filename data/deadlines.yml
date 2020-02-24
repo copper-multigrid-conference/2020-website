@@ -1,0 +1,42 @@
+abstracts:
+  title: Presentation Abstracts
+  date: Jan. 15th, 2020
+  url: submit.html
+
+studentpaper:
+  title: Student Competition Paper
+  date:  Jan. 10th, 2020
+  url:   student.html
+
+studentabs:
+  title: Student Competition Abstract
+  date:  Dec. 13th, 2019
+  url:   student.html
+
+earlyregistration:
+  title: Early Registration
+  date:  Jan. 17th, 2020
+  url:   registration.html
+
+registration:
+  title: Registration
+  date: TBD
+  url: registration.html
+
+lodging:
+  title: Lodging
+  date: Feb 20, 2020
+  url: lodging.html
+
+specialissue:
+  title: Journal Special Issue
+  date: Apr. 1 - May 31, 2020
+  url: about.html#specialissue
+
+specialissueopen:
+  title: Journal Special Issue Open
+  date:  April 1,2020
+  url: about.html#specialissue
+
+cancellation:
+  date: Feb. 20, 2020

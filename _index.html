@@ -1,0 +1,201 @@
+{% extends "_layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="d-block mx-auto main-block">
+      <h2 class="title text-danger">{{ info.date }}</h2>
+      <h2 class="title">Copper Mountain, Colorado</h2>
+    </div >
+    <div class="d-block mx-auto main-block">
+<!--      <h2 class="title" style="color: #110000;"><**Program**></h2> -->
+      <!-- once there is a program   -->
+      <h2 class="title" style="color: #110000;"><a href="about.html#tutorial">*Tutorial(3/21): Iterative Methods for Data Analysis </a></h2>
+      <!--
+      <h2 class="title" style="color: #110000;"><a href="notReady.html">*Tutorial(3/21): </a></h2>
+<br/>
+      -->
+      <h2 class="title" style="color: #110000;"><a href="{{info.programlink}}">**Tentative Program**</a></h2>
+<!--
+      <h2 class="title" style="color: #110000;"><a href="notReady.html">**Program**: </a></h2>
+-->
+<!--
+-->      
+      <h2 class="title" style="color: #110000;"><a href="./program-static/index.html">**Program (archive)**</a></h2>
+      <h2 class="title" style="color: #110000;"> All conference presentation sessions are at the Copper Conference Center </h2>
+      <h2 class="title" style="color: #110000;"> NOTE: Conference Banquet is at the Grand Hall- Copper Station </h2>
+    </div >
+    <div class="d-block mx-auto main-block">
+      <h2 class="title">Schedule at a glance</h2>
+      <!--
+      <href="notReady.html">
+      -->
+      <a href="{{info.programlink}}">
+      <img class="mx-auto d-block img-fluid img-rounded" src="./images/schedule.png" alt="schedule" width="400px">
+      </a>
+   </div >
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="card">
+        <!-- from https://commons.wikimedia.org/wiki/File:Copper_Trail.jpg retrieved on 20160711 -->
+        <!-- This work has been released into the public domain by its
+          author, DebateLord at English Wikipedia. This applies worldwide.
+          In some countries this may not be legally possible; if so: DebateLord grants
+          anyone the right to use this work for any purpose, without any conditions,
+          unless such conditions are required by law. -->
+        <img class="img-fluid img-rounded" src="./images/640px-Copper_Trail.jpg" alt="Copper Mountain">
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card card-info copper-color">
+        <div class="card-block">
+          <h4 class="card-title">Conference Deadlines</h4>
+
+<!--
+<a href="notReady.html"         > {{deadlines.abstracts.title}}:       </a>{{deadlines.abstracts.date}}        <br/>
+<span style="text-decoration: underline;">Student Competition </span> <br/>
+&nbsp &nbsp &nbsp <a href="notReady.html"      > {{deadlines.studentabs.title}}:    </a>{{deadlines.studentabs.date}}     <br/>
+&nbsp &nbsp &nbsp <a href="notReady.html"      > {{deadlines.studentpaper.title}}:    </a>{{deadlines.studentpaper.date}}     <br/>
+<a href="{{deadlines.earlyregistration.url}}" > {{deadlines.earlyregistration.title}}:</a>{{deadlines.earlyregistration.date}}<br/>
+<a href="{{deadlines.specialissue.url}}"      > {{deadlines.specialissue.title}}:    </a>{{deadlines.specialissue.date}}     <br/>
+-->
+<!--
+<a href="notReady.html"           > {{deadlines.lodging.title}}:         </a>{{deadlines.lodging.date}}          <br/>
+-->
+
+<a href="{{deadlines.lodging.url}}"           > {{deadlines.lodging.title}}:         </a>{{deadlines.lodging.date}}          <br/>
+
+<a href="{{deadlines.abstracts.url}}"         > {{deadlines.abstracts.title}}:       </a>{{deadlines.abstracts.date}}        <br/>
+<span style="text-decoration: underline;">Student Competition </span> <br/>
+&nbsp &nbsp &nbsp <a href="{{deadlines.studentabs.url}}"      > {{deadlines.studentabs.title}}:    </a>{{deadlines.studentabs.date}}     <br/>
+&nbsp &nbsp &nbsp <a href="{{deadlines.studentpaper.url}}"      > {{deadlines.studentpaper.title}}:    </a>{{deadlines.studentpaper.date}}     <br/>
+<a href="{{deadlines.earlyregistration.url}}" > {{deadlines.earlyregistration.title}}:</a>{{deadlines.earlyregistration.date}}<br/>
+<a href="{{deadlines.specialissue.url}}"      > {{deadlines.specialissue.title}}:    </a>{{deadlines.specialissue.date}}     <br/>
+<a href="{{deadlines.lodging.url}}"           > {{deadlines.lodging.title}}:         </a>{{deadlines.lodging.date}}          <br/>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row row-top">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h6>Organized by</h6>
+      <a href="http://www.frontrangescicomp.com">Front Range Scientific Computations, Inc.</a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h6>Co-Organized by</h6>
+      The
+      <a href="http://www.colorado.edu/">University of Colorado</a>
+      , 
+      <a href="https://cfwebprod.sandia.gov/cfdocs/CompResearch/index.cfm">Sandia National Laboritories </a>, 
+and 
+      <a href="https://www.sns.it"> Scuola Normale Superiore </a>
+
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h6>Sponsored by</h6>
+      <a href="http://www.anl.gov">ANL</a>,
+      <a href="http://www.doe.gov">DOE</a>,
+      <a href="http://www.ibm.com">IBM</a>,
+      <a href="http://www.lbl.gov">LBNL</a>,
+      <a href="http://www.llnl.gov/casc">LLNL</a>,
+      <a href="http://www.lanl.gov">LANL</a>,
+      <a href="http://www.ornl.gov">ORNL</a>,
+      <a href="http://www.sandia.gov">SNL</a>
+      <!-- <a href="http://www.sandia.gov">Sandia</a>, -->
+      <!-- <a href="http://www.nsf.gov">NSF</a>, -->
+      <!-- <a href="http://www.anl.gov">Argonne</a> -->
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h6>In cooperation with</h6>
+      <a href="http://www.siam.org/">SIAM</a> (contact: Michele Benzi)
+      <br/>
+      <img class="img-responsive center-block" src="./images/SIAM_blueRGB.jpg" alt="SIAM" width="100">
+    </div>
+  </div>
+
+  <div class="row row-top">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="card copper-color">
+        <div class="card-block">
+          <h4 class="card-title">Conference Information</h4>
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-users"></i><a href="people.html#chair">Conference Chairs</a>
+            <li><i class="fa-li fa fa-users"></i><a href="people.html#committee">Conference Program Committee</a>
+            <li><i class="fa-li fa fa-users"></i><a href="about.html#topics">Conference Highlights</a></li>
+          </ul>
+          <br/>
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-graduation-cap"></i><a href="student.html#details">Student Registration Support</a>
+            <li><i class="fa-li fa fa-file-text"></i><a href="student.html#details">Student Paper Competition</a>
+            <li><i class="fa-li fa fa-trophy"></i><a href="student.html#past">Student Paper Competition List of Previous Winners</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="card copper-color">
+        <div class="card-block">
+          <h4 class="card-title">Previous Conference Information</h4>
+          <ul class="small list-unstyled">
+            {% for c in previous_conferences %}
+              {% if c.year > 2012 %}
+              {% set recent = True %}
+              {% else %}
+                {% if recent %}
+            <li><a data-toggle="collapse" href="#collapse1"> (more years) </a></li>
+          </ul>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul class="small list-unstyled">
+                {% set recent = False %}
+                {% endif %}
+              {% endif %}
+              <li>
+              {% if c.url %}
+                <a href="{{c.url}}">
+              {% endif %}
+              <b>{{c.year}}</b> - {{c.title}}
+              {% if c.url %}
+                </a>
+              {% endif %}
+              {% if c.journal %}
+                <ul class="fa-ul">
+                  <li><i class="fa fa-book"></i> <a href="{{c['journal-url']}}"> {{c['journal-abbv']}} Journal Special Issue </a> </li>
+                </ul>
+              {% endif %}
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="card copper-color">
+        <div class="card-block">
+          <h4 class="card-title">Copper Mountain Information</h4>
+          <!--Conference group rates for: -->
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-snowflake-o"></i>Annette will have lift tickets for purchase</li>
+            <li><i class="fa-li fa fa-snowflake-o"></i><a href="https://www.coppercolorado.com/plan-your-trip/lessons-rentals/lessons"> rental, lesson, & tubing  information</a></li>
+          </ul>
+          Travel information:
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-bus"></i><a href="about.html#location">Shuttle information</a></li>
+          </ul>
+          Copper Mtn adventures and activities :
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-snowflake-o"></i><a href="http://www.coppercolorado.com/things-to-do/activities-amenities">Copper Activities</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "_layout.html" %}
+{% block title %}People{% endblock %}
+{% block content %}
+
+{%macro maketable(committee, role) -%}
+  <table class="table table-sm">
+    <tbody>
+      {% for c in committee %}
+      {% if role.lower() in c.role.lower() %}
+          <tr>
+            <td style="width: 200px"><a href="{{c.url}}">{{c.name}}</a></td>
+            <td style="width: 300px">{{c.email}}</td>
+            <td>{{c.affil}}</td>
+          </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro %}
+
+    <div class="container">
+      <h4 id="TBD"> ...........................................................................................   </h4>
+      <h4 id="TBD2">Please Come Back Later. This link is still under construction.  </h4>
+    </div>
+{% endblock %}
