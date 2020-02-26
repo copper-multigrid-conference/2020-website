@@ -58,11 +58,11 @@ latexdoc2 = r'''\documentclass{article}
 \begin{document}
 '''
 
-latexdoc3 = r'''\documentclass[9pt]{article}
+latexdoc3 = r'''\documentclass{article}
 \usepackage[landscape,vmargin=0.5in,hmargin=0.5in]{geometry}
 \usepackage{booktabs}
 \usepackage{longtable}
-\usepackage[defaultfam,light,tabular,lining]{montserrat}
+\usepackage[defaultfam,light,tabular,lining,scaled=.8]{montserrat}
 \usepackage[table]{xcolor}
 
 % basic column sizes
@@ -158,7 +158,7 @@ def froom(mystr):
 
 def fauth(mystr):
     """author formatting"""
-    return f'{{\\tiny \\color{{black!70}}\\selectfont {mystr}}}'
+    return f'{{\\small \\color{{black!70}}\\selectfont {mystr}}}'
 
 
 def fstime(mystr):
@@ -230,6 +230,8 @@ def generate_tex(sessiondata, rooms, np=3):
         for t in range(s, s + np):
             session_timeX, session_nameX, partX, talkdataX = sessiondata[t]
             session_timeX = fstime(session_timeX)
+            for r in rooms:
+                session_nameX = session_nameX.replace(rooms[r], '')
             session_nameX = fsess(tex_escape(session_nameX))
             if any(s in session_nameX for s in ['Breakfast', 'Coffee', 'Lunch', 'Banquet']):
                 roomX = ''
@@ -244,10 +246,10 @@ def generate_tex(sessiondata, rooms, np=3):
 
         # write the session header
         if np == 1:
-            latexmain += f'{session_time[-1]} & \\sessfull{{{session_name[-1]} \\quad {room[-1]}}} \\\\{midrule0}\n'
+            latexmain += f'{session_time[-1]} & \\sessfull{{{session_name[-1]} \\quad\\newline {room[-1]}}} \\\\{midrule0}\n'
         if np > 1:
             for t in range(np):
-                latexmain += f'{session_time[t]} & \\sesspart{{{session_name[t]} \\quad {room[t]}}} '
+                latexmain += f'{session_time[t]} & \\sesspart{{{session_name[t]} \\quad\\newline {room[t]}}} '
                 if t < np-1:
                     latexmain += '& '
                 else:
@@ -324,15 +326,26 @@ data = {'Saturday 3/21': 'https://easychair.org/smart-program/CM2020/2020-03-21.
         'Wednesday 3/25': 'https://easychair.org/smart-program/CM2020/2020-03-25.html',
         'Thursday 3/26': 'https://easychair.org/smart-program/CM2020/2020-03-26.html'
         }
+redownload = True
 
 for d in data:
     print(f'Retreiving {d}')
-    url = requests.get(data[d]).text
-    #import pickle
-    #with open('url.pk', 'wb') as f:
-    #    pickle.dump(url, f)
-    #with open('url.pk', 'rb') as f:
-    #    url = pickle.load(f)
+    filename = d.replace(' ', '-').replace('/', '-')
+    htmlfilename = filename + '.html'
+    if redownload:
+        url = requests.get(data[d]).text
+        with open(htmlfilename, 'w') as f:
+            f.write(url)
+    else:
+        try:
+            with open(htmlfilename, 'r') as f:
+                url = f.read()
+            print('--using cached')
+        except FileNotFoundError:
+            url = requests.get(data[d]).text
+            with open(htmlfilename, 'w') as f:
+                f.write(url)
+
     soup = bs.BeautifulSoup(url, 'lxml')
 
     print(f'-Scrubbing {d}')
@@ -342,9 +355,9 @@ for d in data:
     latexmain = generate_tex(sessiondata, rooms)
 
     title = f'{{\\centering\\LARGE\\textbf{{ {d} }}}}\\bigskip\\bigskip\n\n'
-    filename = d.replace(' ', '-').replace('/', '-') + '.tex'
-    with open(filename, "w") as texfile:
+    texfilename = filename + '.tex'
+    with open(texfilename, "w") as texfile:
         print(latexdoc0 + title + latexmain + latexdoc1, file=texfile)
 
-    print(f'-Building {filename}')
-    subprocess.check_call(['latexrun', filename])
+    print(f'-Building {texfilename}')
+    subprocess.check_call(['latexrun', texfilename])

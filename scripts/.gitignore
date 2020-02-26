@@ -8,3 +8,9 @@ Thursday-3-26.tex
 Tuesday-3-24.tex
 Wednesday-3-25.tex
 latex.out/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.html
